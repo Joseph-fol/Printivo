@@ -481,7 +481,7 @@
 
     </footer>
     <div class="copywrite">
-        <p>Copyright © 2023 Printivo. All rights reserved.</p>
+        <p>Copyright © <span id="year"></span> Printivo. All rights reserved.</p>
     </div>
 
     <script>
@@ -503,6 +503,10 @@
                 document.body.style.overflow = 'auto';
             });
         }
+
+        const year = document.getElementById('year')
+        const currentYear = new Date().getFullYear();
+        year.innerHTML = currentYear;
     </script>
 </body>
 </html>
